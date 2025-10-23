@@ -1,0 +1,111 @@
+
+app:
+  name: "Offline Video Editor"
+  platform: "iOS"
+  language: "Swift"
+  description: "An offline video editing app with features like trimming, subtitle generation, and visual effects."
+  features:
+    basic_editing:
+      - cut: "Remove unnecessary parts of the video."
+      - trim: "Adjust start and end points of the video."
+      - split: "Divide the video into multiple clips."
+      - merge: "Combine multiple videos into a single one."
+      - speed_change: "Change playback speed (slow/fast)."
+      - reverse_rotate: "Reverse video or rotate."
+      - crop: "Cut out parts of the screen."
+      - freeze_frame: "Insert a still frame at a point in the video."
+
+    visual_effects:
+      - filter: "Apply color adjustments to the video."
+      - transition: "Add scene transition effects."
+      - effect: "Apply visual effects like blur, light, glitches."
+      - background_blur_remove: "Apply portrait background effects or remove background."
+      - picture_in_picture: "Insert smaller video or image in the main video."
+      - greenscreen: "Chroma key effect for background removal."
+      - 3d_animation: "Add 3D effects or animation to the video."
+
+    text_and_subtitles:
+      - text_insert: "Add titles or captions to the video."
+      - auto_subtitle_generation: "Automatically generate subtitles from audio using Whisper (offline)."
+      - font_color_change: "Change the font, color, and size of subtitles."
+      - animated_text: "Add animation to text elements."
+      - template_text: "Provide predefined text templates (news, movie style)."
+
+    audio_editing:
+      - music_addition: "Add background music (BGM) or sound effects."
+      - volume_adjustment: "Adjust audio volume or apply fade in/out effects."
+      - noise_removal: "Remove unwanted background noise from audio."
+      - narration_recording: "Record custom narration for the video."
+      - voice_changer: "Apply voice-changing effects (pitch, speed)."
+
+    image_and_assets:
+      - stickers_emoji: "Insert stickers or emojis into the video."
+      - shapes_illustrations: "Add shapes or illustrations to the video."
+      - overlay: "Overlay images or videos on top of the main video."
+
+    output_and_sharing:
+      - resolution_frame_rate: "Choose resolution and frame rate for export."
+      - aspect_ratio_change: "Change aspect ratio (16:9, 9:16, 1:1, etc.)."
+      - direct_share: "Share the video directly to social media or via AirDrop."
+
+  user_experience:
+    interface:
+      vertical_screen_support: "Designed for one-handed use with a vertical screen layout."
+      main_screen_layout:
+        preview_screen_position: "Top center for live video preview."
+        tool_panel_position: "Bottom part of the screen with editing tools."
+        timeline_position: "Left side of the screen, where users can edit and view changes."
+        edit_options_position: "Right side for finer editing options (font, color, size)."
+      simple_navigation:
+        tab_navigation: "Tabs like 'Subtitles', 'Trimming', and 'Text' for easy access."
+        intuitive_icons: "Simple icons and labels for each tool, reducing learning curve."
+      
+    subtitle_features:
+      auto_subtitle_generation:
+        description: "Automatically generate subtitles using Whisper (offline)."
+        language_support: "Supports multiple languages, including Japanese."
+      subtitle_editing:
+        description: "Allows users to modify the subtitles' font, color, size, and position."
+        features:
+          - drag_to_move: "Drag subtitles to change position."
+          - pinch_to_resize: "Resize subtitles with pinch gestures."
+      auto_timing_adjustment:
+        description: "Automatically synchronize subtitles with audio, with manual adjustment options."
+
+    trimming_features:
+      easy_trimming:
+        description: "Set the start and end points of the video for quick trimming."
+        features:
+          - start_end_buttons: "Use buttons to mark the start and end for trimming."
+      zoom_slider:
+        description: "Long press to zoom in the slider for precise trimming."
+      preview_function:
+        description: "Real-time preview of trimming results to ensure accurate editing."
+
+    transcription_and_editing:
+      transcription:
+        description: "Transcribe speech in the video to text using Whisper (offline)."
+        features:
+          - timestamp_inclusion: "Add timestamps to the transcribed text for synchronization."
+          - real_time_editing: "Edit transcribed text in sync with the video."
+      editing_tools:
+        description: "Allow users to edit text directly and adjust timing or content of subtitles."
+        features:
+          - click_to_edit: "Tap on the text to edit subtitles."
+          - real_time_sync: "Ensure edited text stays in sync with audio."
+
+  performance_and_optimization:
+    offline_functionality: "All features are offline to ensure privacy and reduce data usage."
+    resource_management: "Optimize memory and CPU usage to ensure smooth video editing, especially with high-resolution videos."
+    background_processing: "Long processes like rendering happen in the background to avoid UI freezing."
+
+  libraries_and_technologies:
+    whisper:
+      description: "Whisper (offline) for automatic transcription and subtitle generation."
+      integration: "Integrate Whisper's models directly into the app for local processing."
+    video_editing_framework:
+      description: "Use AVFoundation for video processing and editing tasks (cut, trim, merge, etc.)."
+    audio_processing_framework:
+      description: "Use Core Audio or AVAudioEngine for audio editing features like noise removal, volume adjustment, etc."
+    ui_framework:
+      description: "Use UIKit or SwiftUI for creating the intuitive interface with gestures, buttons, and sliders."
